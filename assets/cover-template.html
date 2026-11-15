@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<!--
+  公众号「一图流」封面模板：设计稿 1283×383，导出时 ×3 = 3849×1149
+  左 900×383 横版区 → 消息列表（2.35:1）框选这一整块
+  右 383×383 方形区 → 转发卡片（1:1）框选这一格，字要短
+  每篇只改：话题色 --c 和下面 5 处文字。
+-->
+<style>
+@font-face{font-family:'SH';src:url('../fonts/SourceHanSerifSC-Heavy.otf'),local('Source Han Serif SC Heavy'),local('SourceHanSerifSC-Heavy');}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#555;font-family:'SH','Source Han Serif SC','Noto Serif CJK SC',serif;font-weight:900}
+
+/* ========== 每篇只改这里 ========== */
+:root{ --c:#D8FF00; }  /* 话题色：浅粉 #FF8CC6 营销/IP ｜ 酸绿 #D8FF00 AI/工具 ｜ 金黄 #FFC937 重磅/立flag */
+/* ================================= */
+
+.wrap{width:1283px;height:383px;display:flex;background:#221A12;position:relative;overflow:hidden}
+.wrap::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 140% at 22% 0%,color-mix(in srgb,var(--c) 9%,transparent) 0%,rgba(34,26,18,0) 58%)}
+.wrap>*{position:relative;z-index:2}
+.left{width:900px;height:383px;padding:0 40px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.left .eyebrow{color:#9C8B74;font-size:19px;letter-spacing:.26em}
+.left .l1{color:#FBF4E6;font-size:31px;line-height:1.3;margin-top:18px;white-space:nowrap}
+.left .big{color:var(--c);font-size:104px;line-height:1.02;margin-top:6px;white-space:nowrap}
+.left .sub{color:#B5A78F;font-size:19px;margin-top:18px;white-space:nowrap}
+.sep{width:1px;height:383px;background:#3A2E22}
+.right{width:382px;height:383px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.right .big{color:var(--c);font-size:76px;line-height:1;white-space:nowrap;text-align:center}
+.right .sub{color:#FBF4E6;font-size:14px;letter-spacing:.26em;text-indent:.26em;margin-top:18px}
+</style></head><body>
+<div class="wrap">
+  <div class="left">
+    <div class="eyebrow">WORKFLOW 001</div>          <!-- ① 英文大写眉题 -->
+    <div class="l1">公众号排版这件笨功夫</div>        <!-- ② 引子一句 -->
+    <div class="big">没了。</div>                    <!-- ③ 大字：标题的"压缩钩子"，别和标题重复，句号收尾 -->
+    <div class="sub">2 小时 → 10 分钟</div>           <!-- ④ 补一句结果（可删） -->
+  </div>
+  <div class="sep"></div>
+  <div class="right">
+    <div class="big">10min</div>                     <!-- ⑤ 方形区：3–4 个字以内 -->
+    <div class="sub">WORKFLOW</div>
+  </div>
+</div>
+</body></html>

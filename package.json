@@ -1,0 +1,7 @@
+{
+  "name": "wechat-moye-layout",
+  "private": true,
+  "type": "module",
+  "scripts": { "cover": "node scripts/render_cover.mjs" },
+  "dependencies": { "puppeteer-core": "^25.4.0" }
+}

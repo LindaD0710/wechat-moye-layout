@@ -1,0 +1,6 @@
+node_modules/
+fonts/*.otf
+*.jpg
+*.png
+!assets/*.png
+.DS_Store
