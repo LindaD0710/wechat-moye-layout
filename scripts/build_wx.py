@@ -12,6 +12,7 @@
   **重点**        → 荧光笔（话题色底 + 墨夜黑字），全文建议只用 5–6 处
   ![图注](路径)   → 图片（转 base64 内嵌）+ 灰色小字图注
   | 表格 |        → 表头墨夜黑底，斑马纹
+  - 列表        → 圆点列表（列表内加粗走普通粗体，不占荧光笔配额）
   ``` 代码块 ```  → 浅色提示词框（适合放"可以直接复制给 AI 的话术"）
   `行内代码`
 """
@@ -96,6 +97,14 @@ while i < len(lines):
         out.append('<p style="margin:0 0 22px;padding:18px 20px;background:#faf8f3;'
                    f'border:1px solid #e6e0d5;border-radius:8px;font-size:14px;color:{INK};'
                    f'line-height:2.0;letter-spacing:0.5px;">{inner}</p>')
+        continue
+    if ln.startswith("- "):
+        # 列表：列表里的加粗只做普通粗体，不占荧光笔配额
+        items = []
+        while i < len(lines) and lines[i].startswith("- "):
+            items.append(lines[i][2:].rstrip()); i += 1
+        lis = "".join(f'<li style="margin:0 0 10px;">{inline_plain(t)}</li>' for t in items)
+        out.append(f'<ul style="margin:0 0 22px;padding-left:22px;font-size:15px;color:{BODY};line-height:1.85;letter-spacing:0.5px;">{lis}</ul>')
         continue
     if ln.startswith("### "):
         n += 1
