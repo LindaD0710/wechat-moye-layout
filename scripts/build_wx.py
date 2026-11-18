@@ -29,7 +29,7 @@ ap.add_argument("hilite_pos", nargs="?", default=None, help=argparse.SUPPRESS)  
 ap.add_argument("--note", default=None, help="文末小字脚注，不传就不出")
 ap.add_argument("--accent", default=None, help="章节编号数字色 + 引用块左边线，默认酸绿 #D8FF00")
 ap.add_argument("--hilite", default=None, help="荧光笔底色，必须能压住墨夜黑字，默认同 accent")
-ap.add_argument("--divider-before", default="我是琳达，深耕 AI+营销方向，一个会写 coding、会搭 AI Agent 的 Marketer。营销的笨功夫，都值得用 AI 重做一遍。",
+ap.add_argument("--divider-before", default="我是琳达，深耕 AI+营销方向，一个会写 coding、会搭 AI Agent 的 Marketer。营销里那些天天都会遇到的真问题，都值得用 AI 重新解决一遍。",
                 help="在这一段之前插入 · · · 分隔符（结尾三件套），传空字符串关闭")
 ap.add_argument("--stop-at", default="## 事实核查备忘", help="遇到这一行就截断，后面的备忘不进排版")
 a = ap.parse_args()

@@ -20,7 +20,7 @@ npm i                                   # 安装 puppeteer-core（需要本机�
 # 字体：下载思源宋体 Heavy 放到 fonts/SourceHanSerifSC-Heavy.otf（或装到系统）
 
 node scripts/render_cover.mjs assets/cover-template.html cover.jpg
-python3 scripts/build_wx.py examples/sample.md sample.html "示例" "# 示例：排版这件笨功夫，我用 AI 做掉了"
+python3 scripts/build_wx.py examples/sample.md sample.html "示例" "# 示例：排版这件重复活，我用 AI 做掉了"
 open sample.html                        # 全选 → 复制 → 粘进公众号编辑器
 ```
 
@@ -28,4 +28,4 @@ open sample.html                        # 全选 → 复制 → 粘进公众号�
 把整个文件夹放进你的 skills 目录（如 `~/.claude/skills/` 或项目的 `.agents/skills/`）。
 
 ## 作者
-琳达 · AI + 营销。营销的笨功夫，都值得用 AI 重做一遍。
+琳达 · AI + 营销。营销里那些天天都会遇到的真问题，都值得用 AI 重新解决一遍。
